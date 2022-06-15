@@ -1,4 +1,4 @@
-package com.practice.oop.solid.openclosed;
+package com.practice.oop.solid.liskov;
 
 public class Developer {
     private String langName;
@@ -19,7 +19,7 @@ public class Developer {
         System.out.println("Default lang syntax");
     }
 
-    public void eat() {
-
+    public void reaction() {
+        System.out.println("Default reaction");
     }
 }

@@ -1,11 +1,10 @@
-package com.practice.oop.solid.openclosed;
+package com.practice.oop.solid.liskov;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        // неправильно по SOLID
         Developer dev1 = new JavaDeveloper();
         dev1.setLangName("Java");
 
@@ -16,8 +15,13 @@ public class Test {
         devList.add(dev1);
         devList.add(dev2);
 
-        for (Developer dev : devList) {
-            dev.writeCode();
+        showReaction(devList);
+    }
+
+    // Верный подход SOLID - универсальный метод (функция), который умеет работать с любыми типами и подтипами Developer
+    public static void showReaction(List<Developer> devList) {
+        for (Developer developer: devList) {
+            developer.reaction(); // Будет вызываться нужная реализация объекта
         }
     }
 }

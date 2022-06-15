@@ -1,4 +1,4 @@
-package com.practice.oop.solid.singlerp;
+package com.practice.oop.solid.srp;
 
 /*
 Объект не должен заниматься НЕ своими делами
